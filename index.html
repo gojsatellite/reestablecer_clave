@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia: Cambiar nombre y clave WiFi</title>
+  <meta name="description" content="Guia paso a paso para cambiar el nombre de red (SSID) y la contrasena WiFi mediante la Herramienta de administracion en 10.0.0.1.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Ctext y='1em'%3E%F0%9F%94%90%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">?? Guia WiFi</div>
+    <nav class="actions">
+      <button id="toggleTheme" class="ghost" aria-label="Alternar tema">??</button>
+      <a class="btn" href="http://10.0.0.1" target="_blank" rel="noopener">Abrir 10.0.0.1</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Cambiar nombre y contrasena de tu WiFi</h1>
+      <p class="lead">
+        Sigue estos pasos para actualizar el <strong>SSID</strong> (nombre de tu red) y/o la <strong>clave WiFi</strong> usando la <strong>Herramienta de administracion</strong> en <code>10.0.0.1</code>.
+      </p>
+      <div class="pill info">
+        ?? Nota: Algunas puertas de enlace pueden mostrar opciones o rutas con nombres distintos. Si un menu no aparece exactamente igual, busca la seccion <em>WiFi</em> o <em>Wireless</em>.
+      </div>
+    </section>
+
+    <article class="card">
+      <h2>Herramienta de administracion (10.0.0.1)</h2>
+
+      <ol class="steps">
+        <li>
+          <div class="step-head">
+            <span class="step-num">1</span>
+            <h3>Conectate a tu red</h3>
+          </div>
+          <p>Conecta tu equipo al WiFi del gateway (o por cable Ethernet).</p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">2</span>
+            <h3>Abre la herramienta</h3>
+          </div>
+          <p>
+            Escribe <code>http://10.0.0.1</code> en el navegador.
+            <button class="chip" data-copy="http://10.0.0.1">Copiar 10.0.0.1</button>
+          </p>
+          <details class="note">
+            <summary>Usuario y contrasena de administrador?</summary>
+            <p>
+              Valores predeterminados (si nunca los cambiaste) suelen ser
+              <strong>usuario:</strong> <code>admin</code> y
+              <strong>clave:</strong> <code>password</code>. Si no funcionan u olvidaste las credenciales, puede requerirse un
+              <em>restablecimiento de fabrica</em> (mantener presionado el boton de <em>reset</em> 20–30 s).
+            </p>
+          </details>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">3</span>
+            <h3>Ingresa y ve a WiFi</h3>
+          </div>
+          <p>
+            Inicia sesion. En el menu, navega a
+            <strong>Gateway ? Connection ? WiFi</strong> (o una ruta similar).
+          </p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">4</span>
+            <h3>Edita nombre y clave</h3>
+          </div>
+          <p>
+            En <em>Private WiFi Network</em> elige <strong>Edit</strong>. Si se muestran bandas 2.4 GHz y 5 GHz,
+            puedes configurar ambas. Cambia:
+          </p>
+          <ul class="checklist">
+            <li><strong>Nombre de red (SSID)</strong></li>
+            <li><strong>Contrasena</strong> (recomendado ? 12 caracteres con mayusculas, minusculas, numeros y simbolo)</li>
+          </ul>
+          <p>Guarda con <strong>Save Settings</strong>. Tus dispositivos se desconectaran; reconectalos con la nueva clave.</p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">5</span>
+            <h3>Verifica la conexion</h3>
+          </div>
+          <p>
+            En tu telefono/PC, olvida la red anterior y conectate a la nueva. Si no aparece, reinicia el gateway y espera 2–3 minutos.
+          </p>
+        </li>
+      </ol>
+    </article>
+
+    <section class="faq card">
+      <h2>Solucion de problemas</h2>
+      <div class="accordion">
+        <details>
+          <summary>No recuerdo la clave de la Herramienta de administracion</summary>
+          <p>
+            Si cambiaste la clave de administrador y la olvidaste, normalmente debes
+            <strong>restablecer a valores de fabrica</strong> (boton <em>reset</em> 20–30 s). Luego podras entrar con las credenciales por defecto.
+          </p>
+        </details>
+        <details>
+          <summary>La pagina 10.0.0.1 no abre</summary>
+          <ul>
+            <li>Comprueba que estas conectado a tu propia red.</li>
+            <li>Prueba otro navegador y desactiva VPN.</li>
+            <li>Escribe exactamente <code>http://10.0.0.1</code> (ojo con <code>10.0.0.0.1</code>).</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Mis equipos siguen viendo el SSID antiguo</summary>
+          <p>
+            Olvida la red y reconecta. Si configuraste 2.4 GHz y 5 GHz por separado, edita ambas. Reinicia el gateway y espera unos minutos.
+          </p>
+        </details>
+      </div>
+
+      <p class="small muted">
+        Esta guia resume el flujo habitual en la Herramienta de administracion (10.0.0.1). Los nombres de menus pueden variar por modelo/version.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Checklist rapida</h2>
+      <ul class="todo">
+        <li><input type="checkbox" id="t1"><label for="t1">Pude abrir <code>10.0.0.1</code></label></li>
+        <li><input type="checkbox" id="t2"><label for="t2">Cambie el nombre de red (SSID)</label></li>
+        <li><input type="checkbox" id="t3"><label for="t3">Cambie y guarde la contrasena</label></li>
+        <li><input type="checkbox" id="t4"><label for="t4">Reconecte mis dispositivos</label></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Guia WiFi para clientes. Sitio no oficial. Marcas pertenecen a sus respectivos duenos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
