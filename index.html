@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<header class="topbar glass">
+  <div class="brand">
+    <a href="./" class="logo-wrap" aria-label="Inicio TV TOTAL">
+      <img src="tvtotal.png" alt="TV TOTAL" width="120" class="logo">
+      <span class="brand-text">TV TOTAL</span>
+    </a>
+  </div>
+  <nav class="actions">
+    <button id="toggleTheme" class="ghost" aria-label="Alternar tema">??</button>
+    <a class="btn" href="http://10.0.0.1" target="_blank" rel="noopener">Abrir 10.0.0.1</a>
+  </nav>
+</header><body>
+  <header class="topbar glass">
+    <div class="brand">
+      <!-- Logo SVG profesional (puedes reemplazar por <img src="logo.png" alt="TV TOTAL">) -->
+      <a href="./" class="logo-wrap" aria-label="Inicio TV TOTAL">
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true" class="logo">
+          <!-- marca + casa -->
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#d8e3ff"/>
+            </linearGradient>
+          </defs>
+          <path d="M10 30L32 12l22 18v18a6 6 0 0 1-6 6H16a6 6 0 0 1-6-6V30z" fill="url(#g)"/>
+          <!-- wifi -->
+          <path d="M20 20a20 20 0 0 1 24 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <path d="M24 24a14 14 0 0 1 16 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <path d="M28 28a8 8 0 0 1 8 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <!-- inicial tipo TT -->
+          <path d="M23 38h18v4h-6v10h-6V42h-6z" fill="#1a1f2e" opacity=".9"/>
+        </svg>
+        <span class="brand-text">TV TOTAL</span>
+      </a>
+    </div>
+    <nav class="actions">
+      <button id="toggleTheme" class="ghost" aria-label="Alternar tema">??</button>
+      <a class="btn" href="http://10.0.0.1" target="_blank" rel="noopener">Abrir 10.0.0.1</a>
+    </nav>
+  </header>
+
+  <!-- Hero con fondo llamativo -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Guia para cambiar nombre y clave WiFi</h1>
+      <p class="lead">Sigue los pasos para actualizar el <strong>SSID</strong> y la <strong>contrasena</strong> desde la Herramienta de administracion en <code>10.0.0.1</code>.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <article class="card">
+      <h2>Herramienta de administracion (10.0.0.1)</h2>
+
+      <ol class="steps">
+        <li>
+          <div class="step-head">
+            <span class="step-num">1</span>
+            <h3>Conectate a tu red</h3>
+          </div>
+          <p>Conecta tu equipo al WiFi del gateway (o por cable Ethernet).</p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">2</span>
+            <h3>Abre la herramienta</h3>
+          </div>
+          <p>
+            Escribe <code>http://10.0.0.1</code> en el navegador.
+            <button class="chip" data-copy="http://10.0.0.1">Copiar 10.0.0.1</button>
+          </p>
+          <details class="note">
+            <summary>Usuario y contrasena de administrador?</summary>
+            <p>
+              Por defecto (si nunca se cambiaron): <strong>usuario</strong> <code>admin</code> y
+              <strong>clave</strong> <code>password</code>.  
+              Si no funcionan, podria requerirse un <em>reset de fabrica</em> (mantener presionado el boton de reset 20�30 s).
+            </p>
+          </details>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">3</span>
+            <h3>Ingresa y ve a WiFi</h3>
+          </div>
+          <p>Ve a <strong>Gateway ? Connection ? WiFi</strong> (o ruta similar segun modelo).</p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">4</span>
+            <h3>Edita nombre y clave</h3>
+          </div>
+          <p>En <em>Private WiFi Network</em> elige <strong>Edit</strong>. Si ves 2.4 GHz y 5 GHz, configura ambas:</p>
+          <ul class="checklist">
+            <li><strong>Nombre de red (SSID)</strong></li>
+            <li><strong>Contrasena</strong> (recomendado >= 12 caracteres con mayusculas, minusculas, numeros y simbolo)</li>
+          </ul>
+          <p>Guarda con <strong>Save Settings</strong>. Tus dispositivos se desconectaran y deberas reconectarlos.</p>
+        </li>
+
+        <li>
+          <div class="step-head">
+            <span class="step-num">5</span>
+            <h3>Verifica</h3>
+          </div>
+          <p>En tu telefono/PC, olvida la red anterior y conectate a la nueva. Si no aparece, reinicia el gateway y espera 2�3 minutos.</p>
+        </li>
+      </ol>
+    </article>
+
+    <section class="faq card">
+      <h2>Solucion de problemas</h2>
+      <div class="accordion">
+        <details>
+          <summary>No recuerdo la clave de administrador</summary>
+          <p>Si la olvidaste, normalmente debes hacer <strong>reset de fabrica</strong> (boton reset 20�30 s) y volveran las credenciales por defecto.</p>
+        </details>
+        <details>
+          <summary>La pagina 10.0.0.1 no abre</summary>
+          <ul>
+            <li>Verifica estar en tu red (WiFi/Ethernet del gateway).</li>
+            <li>Prueba otro navegador y desactiva VPN.</li>
+            <li>Escribe exactamente <code>http://10.0.0.1</code>.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <p>� 2025 TV TOTAL. Guia no oficial. Marcas pertenecen a sus respectivos duenos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
