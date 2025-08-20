@@ -1,0 +1,113 @@
+.logo {
+  display: block;
+  max-height: 48px;
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+}
+.brand-text {
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: #fff;
+}
+:root{
+  --bg:#0b0c10;
+  --card:#12141a;
+  --text:#eef2ff;
+  --muted:#b7c0d9;
+  --border:#1f2432;
+  --brand:#ffffff;
+}
+
+/* Fondo llamativo con gradiente animado */
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--text);
+  background:#0b0c10;
+}
+
+/* Hero de color vivo */
+.hero{
+  position:relative;
+  min-height:48vh;
+  display:grid;place-items:center;
+  text-align:center;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 600px at -5% 110%, #ff6ec7 0%, transparent 50%),
+    radial-gradient(1000px 600px at 105% -10%, #00d1b2 0%, transparent 55%),
+    radial-gradient(700px 500px at 50% 10%, #7b5cff 0%, transparent 60%),
+    linear-gradient(180deg, #0b0c10 0%, #0d0f16 100%);
+  filter:saturate(110%);
+  animation:shift 20s linear infinite;
+}
+@keyframes shift{
+  0%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-2%,0)}
+  100%{transform:translate3d(0,0,0)}
+}
+.hero-inner{position:relative; z-index:1; padding:32px 16px}
+.hero h1{font-size:clamp(28px,5vw,44px); margin:0 0 .5rem}
+.lead{color:var(--muted); max-width:900px; margin:0 auto}
+
+.topbar, .footer{
+  position:sticky; top:0;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding:12px 16px; z-index:10;
+}
+.footer{position:static; margin-top:32px; border-top:1px solid var(--border); justify-content:center}
+
+.glass{
+  background:rgba(17,20,31,.55);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:saturate(160%) blur(10px);
+}
+
+.brand .logo{display:block; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35))}
+.logo-wrap{display:flex; align-items:center; gap:10px; color:var(--brand); text-decoration:none}
+.brand-text{font-weight:800; letter-spacing:.5px; color:#fff}
+
+.actions{display:flex; gap:8px}
+.btn,.ghost{
+  border:1px solid var(--border); color:#0b0c10; background:#fff;
+  padding:8px 12px; border-radius:10px; text-decoration:none; cursor:pointer; font-weight:600;
+}
+.ghost{background:transparent; color:#fff}
+.btn:hover{filter:brightness(1.05)}
+.ghost:hover{border-color:#5c63ff}
+
+.container{max-width:1100px; margin:auto; padding:24px 16px; display:grid; gap:24px}
+
+.card{
+  background:linear-gradient(180deg,#141824 0%, #0e111a 100%);
+  border:1px solid var(--border); border-radius:16px; padding:20px; display:grid; gap:14px;
+  box-shadow:0 22px 50px rgba(0,0,0,.35);
+}
+
+.steps{display:grid; gap:18px; list-style:none; padding:0; margin:0}
+.step-head{display:flex; align-items:center; gap:12px}
+.step-num{
+  width:28px; height:28px; border-radius:50%;
+  display:grid; place-items:center; font-weight:700; background:#00d1b2; color:#07121a;
+}
+.checklist{margin:.2rem 0 0 0; padding-left:18px}
+.checklist li{margin:.25rem 0}
+
+.chip{
+  margin-left:8px; font-size:.9rem; border-radius:999px; padding:6px 10px;
+  border:1px solid var(--border); background:rgba(255,255,255,.06); color:#fff; cursor:pointer;
+}
+.chip:hover{border-color:#7b5cff}
+
+.note summary{cursor:pointer}
+.note{
+  border:1px dashed var(--border); border-radius:12px; padding:10px; background:rgba(255,255,255,.04);
+}
+
+.accordion details{border:1px solid var(--border); border-radius:12px; margin:10px 0; padding:8px 12px; background:rgba(255,255,255,.03)}
+.accordion summary{cursor:pointer; font-weight:600}
+.accordion p, .accordion ul{color:var(--muted)}
